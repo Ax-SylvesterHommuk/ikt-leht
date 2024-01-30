@@ -6,14 +6,17 @@
       Uuri põnevat maailma IT erialade ja võimaluste osas ning liigu edasi VOCO rütmis.
     </div>
   </div>
+  <Footer/>
 </template>
 
 <script>
 import Navbar from '@/components/Navbar.vue';
+import Footer from '@/components/Footer.vue';
 
 export default {
   components: {
-    Navbar
+    Navbar,
+    Footer
   }
 }
 </script>
