@@ -13,7 +13,7 @@
       </div>
     </div>
   </div>
-  <div class="font-montserrat font-medium w-full bg-black py-5 p-[1.25rem] shadow-xl">
+  <div class="font-montserrat font-medium w-full bg-black py-5 p-[1.25rem] shadow-xl shadow-black">
     <div class="container mx-auto flex items-center justify-between">
       <div class="flex items-center">
         <img src="../assets/it_kool.png" alt="Logo" class="h-[75px] cursor-pointer ml-40">
