@@ -1,7 +1,7 @@
 <template>
   <footer class="font-montserrat font-medium bg-black py-12 text-[1rem]">
     <div class="container mx-auto flex items-center justify-between">
-      <img src="../assets/it_kool.png" alt="Logo" class="h-[102px] cursor-pointer ml-40">
+      <img src="../assets/voco_it_kool_logo.svg" alt="Logo" class="h-[102px] cursor-pointer ml-40">
       
       <div class="flex flex-col space-y-6 mr-72">
         <div class="flex items-center gap-12">
