@@ -1,14 +1,15 @@
 <template>
     <div class="flex grid gap-2">
-
+        <div class="flex mx-auto gap-24 text-center">
         <button class="text-xl font-bold"
                 @click="reset()">Today</button>
         <button class="text-xl font-bold"
                 @click="shiftMonth(-1)">Previous</button>
         <button class="text-xl font-bold"
                 @click="shiftMonth(1)">Next</button>
-        <span class="text-3xl">{{ viewDate.format('MMMM YYYY') }}</span>
-
+        </div>
+        <span class="text-3xl text-left">{{ viewDate.format('MMMM YYYY') }}</span>
+      </div>
 
     <!-- Week days -->
     <div class="grid grid-cols-7 gap-1">
@@ -28,7 +29,7 @@
         </div>
       </div>
     </div>
-  </div>
+
 </template>
 
 <script>
