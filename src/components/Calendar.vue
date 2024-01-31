@@ -1,10 +1,11 @@
 <template>
-    <div class="flex grid gap-2 z-10">
+  <div class="font-montserrat font-semibold mx-96">
+    <div class="grid gap-2 z-10">
         <div class="flex mx-auto gap-24 text-center">
         <button class="text-xl font-bold"
-                @click="reset()">Today</button>
-        <button class="text-xl font-bold"
                 @click="shiftMonth(-1)">Previous</button>
+        <button class="text-xl font-bold"
+                @click="reset()">Today</button>
         <button class="text-xl font-bold"
                 @click="shiftMonth(1)">Next</button>
         </div>
@@ -20,7 +21,7 @@
     <div class="grid grid-cols-7">
       <div v-for="emptySlot in daystoPrepend"></div>
       <div class="border border-slate-200 flex flex-col h-32" v-for="date in units">
-        <div :class="[date.isToday() ? 'bg-red-300' : '']" class="text-center">{{ date.format('D') }}</div>
+        <div :class="[date.isToday() ? 'bg-gray-300' : '']" class="text-center">{{ date.format('D') }}</div>
         <div class="events">
           <!-- Display events for this date -->
           <div v-for="event in getEventsForDate(date)">
@@ -29,7 +30,7 @@
         </div>
       </div>
     </div>
-
+  </div>
 </template>
 
 <script>
