@@ -10,9 +10,7 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "SELECT Uritused.Urituse_ID, Uritused.Kuupaev, Kalender.Pealkiri 
-        FROM Uritused 
-        INNER JOIN Kalender ON Uritused.Urituse_ID = Kalender.Urituse_ID";
+$sql = "SELECT Urituse_ID, Kuupaev, Pealkiri FROM Uritused";
 $result = $conn->query($sql);
 
 $events = array();
