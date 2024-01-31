@@ -1,12 +1,14 @@
 <template>
-  <div class="calendar">
-    <!-- Buttons for navigation -->
-    <div class="flex">
-      <button class="btn-primary" @click="reset()">Today</button>
-      <button class="btn" @click="shiftMonth(-1)">Previous</button>
-      <button class="btn" @click="shiftMonth(1)">Next</button>
-      <span class="text-3xl">{{ viewDate.format('MMMM YYYY') }}</span>
-    </div>
+    <div class="flex grid gap-2">
+
+        <button class="text-xl font-bold"
+                @click="reset()">Today</button>
+        <button class="text-xl font-bold"
+                @click="shiftMonth(-1)">Previous</button>
+        <button class="text-xl font-bold"
+                @click="shiftMonth(1)">Next</button>
+        <span class="text-3xl">{{ viewDate.format('MMMM YYYY') }}</span>
+
 
     <!-- Week days -->
     <div class="grid grid-cols-7 gap-1">
@@ -39,7 +41,7 @@ export default {
   data() {
     return {
       viewDate: dayjs(),
-      weekDays: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+      weekDays: ['Pühapäev', 'Esmaspäev', 'Teisipäev', 'Kolmapäev', 'Neljapäev', 'Reede', 'Laupäev'],
       events: []
     };
   },

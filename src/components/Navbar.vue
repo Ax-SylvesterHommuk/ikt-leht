@@ -7,9 +7,9 @@
         <InstagramIcon class="text-black hover:text-[#c8d1e0] cursor-pointer h-6 w-6"/>
       </div>
       <div class="flex items-center space-x-4 mr-32 text-[0.875rem]">
-        <button class="text-black transition-colors hover:text-[#c8d1e0] ease-in-out duration-200 px-3">Kontakt</button>
-        <button class="text-black transition-colors hover:text-[#c8d1e0] ease-in-out duration-200 px-3">Tunniplaan</button>
-        <button class="text-black transition-colors hover:text-[#c8d1e0] ease-in-out duration-200 px-3">Siseveeb</button>
+        <a class="text-black transition-colors hover:text-[#c8d1e0] ease-in-out duration-200 px-3" href="https://voco.ee/kontakt/" target="_blank">Kontakt</a>
+        <a class="text-black transition-colors hover:text-[#c8d1e0] ease-in-out duration-200 px-3" href="https://voco.ee/tunniplaan/" target="_blank">Tunniplaan</a>
+        <a class="text-black transition-colors hover:text-[#c8d1e0] ease-in-out duration-200 px-3" href="https://siseveeb.voco.ee" target="_blank">Siseveeb</a>
       </div>
     </div>
   </div>
