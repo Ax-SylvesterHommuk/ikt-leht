@@ -1,5 +1,5 @@
 <template>
-    <div class="flex grid gap-2">
+    <div class="flex grid gap-2 z-10">
         <div class="flex mx-auto gap-24 text-center">
         <button class="text-xl font-bold"
                 @click="reset()">Today</button>
