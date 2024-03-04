@@ -7,10 +7,10 @@
         <ul>
           <li v-for="month in sortedMonths" :key="month">
             <h3 class="text-lg font-montserrat font-bold mt-4">{{ month }}</h3>
-            <ul>
-              <li v-for="event in groupedEvents[month]" :key="event.Urituse_ID" class="bg-white shadow-md p-4 mb-4 cursor-pointer hover:bg-gray-200 flex items-center" @click="viewEvent(event.Urituse_ID)">
-                <div>
-                  <img :src="event.Pilt" alt="Event Image" class="w-20 h-20 object-cover">
+            <ul class="w-full">
+              <li v-for="event in groupedEvents[month]" :key="event.Urituse_ID" class="bg-white shadow-md mb-4 cursor-pointer duration-150 ease-linear hover:bg-gray-200 flex items-center border border-[#afbacc] relative">
+                <div class="w-[225px] flex-shrink-0 relative">
+                  <img :src="event.Pilt" alt="Event Image" class="w-full h-full object-cover">
                 </div>
                 <div class="ml-4">
                   <p class="text-lg font-montserrat font-semibold">{{ event.Pealkiri }}</p>
@@ -87,11 +87,20 @@ export default {
       });
     }
   },
+  created() {
+    fetch('https://hommukaxsylvester.ikt.khk.ee/api/kalender.php')
+      .then(response => response.json())
+      .then(data => {
+        this.events = data;
+      })
+      .catch(error => {
+        console.error('Error fetching events:', error);
+      });
+  },
   methods: {
     viewEvent(eventId) {
-      // Navigate to event details page with event ID
+      // @TODO: Implement single event view with more details
       console.log('View event', eventId);
-      // this.$router.push({ name: 'EventDetails', params: { id: eventId } });
     },
     formatDate(date) {
       return dayjs(date).locale('et').format('D. MMMM YYYY').replace(/^./, match => match.toUpperCase());
