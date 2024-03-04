@@ -1,25 +1,26 @@
 <template>
   <Navbar />
-  <div class="w-full h-[651px] flex bg-[url('../assets/mainbg.png')] ">
-    <div class="text-2xl text-white font-bold pt-60 pl-60">
+  <div class="w-full h-[700px] flex bg-[url('../assets/mainbg.jpg')] justify-center items-center">
+    <div class="text-4xl text-white font-bold text-center">
       Tarkvaraarendus. Andmeanalüüs. Küberjulgeolek. <br><br>
       Uuri põnevat maailma IT erialade ja võimaluste osas ning liigu edasi VOCO rütmis.
     </div>
   </div>
 
-  <div class="h-[650px] bg-gray-100 flex relative">
+  <div class="h-[750px] bg-[#f5f7fa] flex relative">
     <!-- Text content -->
-    <div class="text-black text-2xl font-montserrat font-bold pl-40 ml-44 pt-40 pr-20 w-1/2 h-[539px] relative z-10">
+    <div class="text-black text-3xl font-montserrat font-bold mt-20 pl-40 ml-44 pt-40 pr-20 w-1/2 h-[539px] relative z-10">
       Meie eesmärk on pakkuda tipptasemel IT-haridust, kus ühendatakse teadmised ja praktiline kogemus. <br><br>Tutvu meie
       sündmuste kalendriga ja astu sisse IT maailma rütmis!
     </div>
 
-    <!-- HTML image in circular design -->
-    <div class="w-1/3 relative">
-      <img src="../assets/html_js_css.png" alt="" class="w-full h-full scale-75 rounded-full">
+    <!-- Image container -->
+    <div class="w-[50%] relative overflow-hidden">
+      <img src="../assets/html_js_css.png" alt="" class="absolute w-[90%] h-[90%] object-fill">
     </div>
 
-    <img src="../assets/voco muster RGB-02.png" alt="" class="absolute scale-105 bottom-0 w-[739px] h-[539px]">
+    <!-- Background image -->
+    <img src="../assets/voco muster RGB-02.png" alt="" class="absolute scale-105 bottom-0 w-[739px] h-[539px] opacity-25">
   </div>
   
   <Calendar />

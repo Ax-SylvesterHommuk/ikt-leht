@@ -3,11 +3,11 @@
     <div class="grid gap-2 z-10">
         <div class="flex mx-auto gap-24 text-center">
         <button class="text-xl font-bold"
-                @click="shiftMonth(-1)">Previous</button>
+                @click="shiftMonth(-1)">Eelmine</button>
         <button class="text-xl font-bold"
-                @click="reset()">Today</button>
+                @click="reset()">Täna</button>
         <button class="text-xl font-bold"
-                @click="shiftMonth(1)">Next</button>
+                @click="shiftMonth(1)">Järgmine</button>
         </div>
         <span class="text-3xl text-left">{{ viewDate.format('MMMM YYYY') }}</span>
       </div>
