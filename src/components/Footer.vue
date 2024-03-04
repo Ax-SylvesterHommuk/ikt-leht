@@ -22,10 +22,10 @@
           </div>
 
           <div class="flex flex-col mr-6">
-            <h2 class="text-white text-[16px] font-bold mb-4">Category Title 3</h2>
+            <h2 class="text-white text-[16px] font-bold mb-4">Privaatsustingimused</h2>
             <div class="font-medium text-[14px] text-white flex flex-col space-y-2">
-              <button class="hover:text-[#c8d1e0] ease-in-out duration-200">Button 1</button>
-              <button class="hover:text-[#c8d1e0] ease-in-out duration-200">Button 2</button>
+              <a href="https://voco.ee/andmekaitse-info/" class="hover:text-[#c8d1e0] ease-in-out duration-200">Andmekaitse</a>
+              <a href="https://voco.ee/kupsised/" class="hover:text-[#c8d1e0] ease-in-out duration-200">Küpsised</a>
             </div>
           </div>
         </div>

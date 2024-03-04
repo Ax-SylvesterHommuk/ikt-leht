@@ -19,12 +19,11 @@
         <img src="../assets/voco_it_kool_logo.svg" alt="Logo" class="h-[75px] cursor-pointer ml-40">
       </div>
       <div class="flex items-center space-x-4 mr-32 text-[0.875rem]">
-        <button class="text-white hover:text-[#c8d1e0] ease-in-out duration-200 px-3 py-1">Button 1</button>
-        <button class="text-white hover:text-[#c8d1e0] ease-in-out duration-200 px-3 py-1">Button 2</button>
-        <button class="text-white hover:text-[#c8d1e0] ease-in-out duration-200 px-3 py-1">Button 3</button>
-        <button class="text-white hover:text-[#c8d1e0] ease-in-out duration-200 px-3 py-1">Button 4</button>
-        <button class="text-white hover:text-[#c8d1e0] ease-in-out duration-200 px-3 py-1">Button 5</button>
-        <button class="text-white hover:text-[#c8d1e0] ease-in-out duration-200 px-3 py-1">Button 6</button>
+        <button class="text-white hover:text-[#c8d1e0] ease-in-out duration-200 px-3 py-1">Konsultatsioonid</button>
+        <button class="text-white hover:text-[#c8d1e0] ease-in-out duration-200 px-3 py-1">Praktika</button>
+        <button class="text-white hover:text-[#c8d1e0] ease-in-out duration-200 px-3 py-1">Kutsemeistrivõistlused</button>
+        <button class="text-white hover:text-[#c8d1e0] ease-in-out duration-200 px-3 py-1">Tunnustused</button>
+        <button class="text-white hover:text-[#c8d1e0] ease-in-out duration-200 px-3 py-1">Üritused</button>
       </div>
     </div>
   </div>
