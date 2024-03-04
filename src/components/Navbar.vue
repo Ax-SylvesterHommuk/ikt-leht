@@ -13,17 +13,17 @@
       </div>
     </div>
   </div>
-  <div class="font-montserrat font-medium w-full bg-black py-5 p-[1.25rem] shadow-xl shadow-black">
+  <div class="font-montserrat font-medium w-full bg-black py-5 p-[1.25rem]">
     <div class="container mx-auto flex items-center justify-between">
       <div class="flex items-center">
-        <img src="../assets/voco_it_kool_logo.svg" alt="Logo" class="h-[75px] cursor-pointer ml-40">
+        <img src="../assets/voco_it_kool_logo.svg" alt="Logo" class="h-[75px] cursor-pointer ml-40" @click="this.$router.push('/');">
       </div>
       <div class="flex items-center space-x-4 mr-32 text-[0.875rem]">
         <a href="https://siseveeb.voco.ee/kutseope/oppetoo/konsultatsioonid" class="text-white hover:text-[#c8d1e0] ease-in-out duration-200 px-3 py-1">Konsultatsioonid</a>
         <button class="text-white hover:text-[#c8d1e0] ease-in-out duration-200 px-3 py-1">Praktika</button>
         <button class="text-white hover:text-[#c8d1e0] ease-in-out duration-200 px-3 py-1">Kutsemeistrivõistlused</button>
         <button class="text-white hover:text-[#c8d1e0] ease-in-out duration-200 px-3 py-1">Tunnustused</button>
-        <button class="text-white hover:text-[#c8d1e0] ease-in-out duration-200 px-3 py-1">Üritused</button>
+        <button class="text-white hover:text-[#c8d1e0] ease-in-out duration-200 px-3 py-1" @click="this.$router.push('/uritused');">Üritused</button>
       </div>
     </div>
   </div>
@@ -39,6 +39,6 @@ export default {
     FacebookIcon,
     TiktokIcon,
     InstagramIcon
-  }
+  },
 }
 </script>

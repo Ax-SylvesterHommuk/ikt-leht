@@ -1,11 +1,21 @@
 <template>
   <Navbar />
-  <div class="w-full h-[700px] flex bg-[url('../assets/mainbg.jpg')] justify-center items-center">
-    <div class="text-4xl text-white font-bold text-center">
-      Tarkvaraarendus. Andmeanalüüs. Küberjulgeolek. <br><br>
-      Uuri põnevat maailma IT erialade ja võimaluste osas ning liigu edasi VOCO rütmis.
+  <div class="w-full h-[900px] flex relative">
+    <!-- Image with overlay -->
+    <div class="w-full h-full bg-[url('../assets/mainbg.jpg')] bg-cover bg-center absolute z-0"></div>
+
+    <!-- Dark overlay -->
+    <div class="w-full h-full bg-black opacity-65 absolute z-10"></div>
+
+    <!-- Text content -->
+    <div class="w-full h-full flex items-center justify-center absolute z-20">
+      <div class="text-4xl text-white font-bold text-center">
+        Tarkvaraarendus. Andmeanalüüs. Küberjulgeolek. <br><br>
+        Uuri põnevat maailma IT erialade ja võimaluste osas ning liigu edasi VOCO rütmis.
+      </div>
     </div>
   </div>
+
 
   <div class="h-[750px] bg-[#f5f7fa] flex relative">
     <!-- Text content -->
