@@ -10,7 +10,7 @@
             <ul class="w-full">
               <li v-for="event in groupedEvents[month]" :key="event.Urituse_ID" class="bg-white shadow-md mb-4 cursor-pointer duration-150 ease-linear hover:bg-gray-200 flex items-center border border-[#afbacc] relative">
                 <div class="w-[225px] flex-shrink-0 relative">
-                  <img :src="event.Pilt" alt="Event Image" class="w-full h-full object-cover">
+                  <img :src="getImageUrl(event.Urituse_ID)" alt="Event Image" class="w-full h-full object-cover">
                 </div>
                 <div class="ml-4">
                   <p class="text-lg font-montserrat font-semibold">{{ event.Pealkiri }}</p>
@@ -39,32 +39,7 @@ export default {
   },
   data() {
     return {
-      events: [
-        {
-          "Urituse_ID": "1",
-          "Kuupaev": "2024-02-01",
-          "Pealkiri": "VOCO Liikumine",
-          "Pilt": "https://voco.ee/wp-content/uploads/noorem-tarkvaraarendaja-veebispetsialist-659-3b4d2-518x293.jpg"
-        },
-        {
-          "Urituse_ID": "3",
-          "Kuupaev": "2024-01-25",
-          "Pealkiri": "SULED SAHISEVAD",
-          "Pilt": "https://voco.ee/wp-content/uploads/noorem-tarkvaraarendaja-veebispetsialist-659-3b4d2-518x293.jpg"
-        },
-        {
-          "Urituse_ID": "5",
-          "Kuupaev": "2024-02-07",
-          "Pealkiri": "asdasd",
-          "Pilt": "https://voco.ee/wp-content/uploads/noorem-tarkvaraarendaja-veebispetsialist-659-3b4d2-518x293.jpg"
-        },
-        {
-          "Urituse_ID": "6",
-          "Kuupaev": "2024-03-13",
-          "Pealkiri": "Aasta Tegija 2015",
-          "Pilt": "https://voco.ee/wp-content/uploads/noorem-tarkvaraarendaja-veebispetsialist-659-3b4d2-518x293.jpg"
-        }
-      ],
+      events: [],
     };
   },
   computed: {
@@ -88,7 +63,7 @@ export default {
     }
   },
   created() {
-    fetch('https://hommukaxsylvester.ikt.khk.ee/api/kalender.php')
+    fetch('https://hommukaxsylvester.ikt.khk.ee/api/kalender.php?include_image=true')
       .then(response => response.json())
       .then(data => {
         this.events = data;
@@ -104,6 +79,9 @@ export default {
     },
     formatDate(date) {
       return dayjs(date).locale('et').format('D. MMMM YYYY').replace(/^./, match => match.toUpperCase());
+    },
+    getImageUrl(eventId) {
+      return `https://hommukaxsylvester.ikt.khk.ee/api/get_image.php?id=${eventId}`;
     }
   }
 }
