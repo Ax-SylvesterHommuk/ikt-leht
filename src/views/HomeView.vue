@@ -19,20 +19,22 @@
 
   <div class="h-[750px] bg-[#f5f7fa] flex relative">
     <!-- Text content -->
-    <div class="text-black text-3xl font-montserrat font-bold mt-20 pl-40 ml-44 pt-40 pr-20 w-1/2 h-[539px] relative z-10">
+    <div class="text-black md:text-xl lg:text-2xl xl:text-3xl font-montserrat font-bold mt-20 pl-4 md:pl-40 ml-2 md:ml-44 pt-40 pr-4 md:pr-20 w-full md:w-1/2 h-auto relative z-10">
       Meie eesmärk on pakkuda tipptasemel IT-haridust, kus ühendatakse teadmised ja praktiline kogemus. <br><br>Tutvu meie
       sündmuste kalendriga ja astu sisse IT maailma rütmis!
     </div>
 
     <!-- Image container -->
-    <div class="w-[50%] relative overflow-hidden">
-      <img src="../assets/html_js_css.png" alt="" class="absolute w-[90%] h-[90%] object-fill">
+    <div class="w-full md:w-[50%] relative overflow-hidden flex items-center justify-center">
+      <img src="../assets/html_js_css.png" alt="" class="w-full h-auto object-cover">
     </div>
 
+
+
     <!-- Background image -->
-    <img src="../assets/voco muster RGB-02.png" alt="" class="absolute scale-105 bottom-0 w-[739px] h-[539px] opacity-25">
+    <img src="../assets/voco muster RGB-02.png" alt="" class="absolute scale-105 bottom-0 w-[739px] h-auto opacity-25">
   </div>
-  
+
   <Calendar />
   <Footer />
 </template>

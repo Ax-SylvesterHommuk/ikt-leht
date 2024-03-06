@@ -8,15 +8,21 @@
           <li v-for="month in sortedMonths" :key="month">
             <h3 class="text-lg font-montserrat font-bold mt-4">{{ month }}</h3>
             <ul class="w-full">
-              <li v-for="event in groupedEvents[month]" :key="event.Urituse_ID" class="bg-white shadow-md mb-4 cursor-pointer duration-150 ease-linear hover:bg-gray-200 flex items-center border border-[#afbacc] relative">
-                <div class="w-[225px] flex-shrink-0 relative">
-                  <img :src="getImageUrl(event.Urituse_ID)" alt="Event Image" class="w-full h-full object-cover">
-                </div>
-                <div class="ml-4">
-                  <p class="text-lg font-montserrat font-semibold">{{ event.Pealkiri }}</p>
-                  <p class="text-gray-600 font-montserrat"><strong>Kuupäev:</strong> {{ formatDate(event.Kuupaev) }}</p>
-                </div>
-              </li>
+              <router-link
+                  v-for="event in groupedEvents[month]"
+                  :key="event.Urituse_ID"
+                  :to="'/uritused/' + event.Urituse_ID"
+              >
+                <li class="bg-white shadow-md mb-4 cursor-pointer duration-150 ease-linear hover:bg-gray-200 flex items-center border border-[#afbacc] relative">
+                  <div class="w-[225px] flex-shrink-0 relative">
+                    <img :src="getImageUrl(event.Urituse_ID)" alt="Event Image" class="w-full h-full object-cover">
+                  </div>
+                  <div class="ml-4">
+                    <p class="text-lg font-montserrat font-semibold">{{ event.Pealkiri }}</p>
+                    <p class="text-gray-600 font-montserrat"><strong>Kuupäev:</strong> {{ formatDate(event.Kuupaev) }}</p>
+                  </div>
+                </li>
+              </router-link>
             </ul>
           </li>
         </ul>
@@ -64,19 +70,15 @@ export default {
   },
   created() {
     fetch('https://hommukaxsylvester.ikt.khk.ee/api/kalender.php?include_image=true')
-      .then(response => response.json())
-      .then(data => {
-        this.events = data;
-      })
-      .catch(error => {
-        console.error('Error fetching events:', error);
-      });
+        .then(response => response.json())
+        .then(data => {
+          this.events = data;
+        })
+        .catch(error => {
+          console.error('Error fetching events:', error);
+        });
   },
   methods: {
-    viewEvent(eventId) {
-      // @TODO: Implement single event view with more details
-      console.log('View event', eventId);
-    },
     formatDate(date) {
       return dayjs(date).locale('et').format('D. MMMM YYYY').replace(/^./, match => match.toUpperCase());
     },

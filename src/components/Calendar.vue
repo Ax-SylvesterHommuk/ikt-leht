@@ -1,30 +1,27 @@
 <template>
-  <div class="font-montserrat font-semibold mx-96">
+  <div class="font-montserrat font-semibold mx-4 md:mx-96">
     <div class="grid gap-2 z-10">
-        <div class="flex mx-auto gap-24 text-center">
-        <button class="text-xl font-bold"
-                @click="shiftMonth(-1)">Eelmine</button>
-        <button class="text-xl font-bold"
-                @click="reset()">Täna</button>
-        <button class="text-xl font-bold"
-                @click="shiftMonth(1)">Järgmine</button>
-        </div>
-        <span class="text-3xl text-left">{{ viewDate.format('MMMM YYYY') }}</span>
+      <div class="flex mx-auto gap-4 md:gap-24 text-center">
+        <button class="text-md md:text-xl font-bold" @click="shiftMonth(-1)">Eelmine</button>
+        <button class="text-md md:text-xl font-bold" @click="reset()">Täna</button>
+        <button class="text-md md:text-xl font-bold" @click="shiftMonth(1)">Järgmine</button>
       </div>
+      <span class="text-lg md:text-3xl text-left">{{ viewDate.format('MMMM YYYY') }}</span>
+    </div>
 
     <!-- Week days -->
     <div class="grid grid-cols-7 gap-1">
-      <div v-for="day in weekDays" class="text-center">{{ day }}</div>
+      <div v-for="day in weekDays" class="text-center text-[11px]">{{ day }}</div>
     </div>
 
     <!-- Calendar days -->
     <div class="grid grid-cols-7">
       <div v-for="emptySlot in daystoPrepend"></div>
-      <div class="border border-slate-200 flex flex-col h-32" v-for="date in units">
-        <div :class="[date.isToday() ? 'bg-gray-300' : '']" class="text-center">{{ date.format('D') }}</div>
+      <div class="border border-slate-200 flex flex-col h-[6vw] md:h-[8vw] lg:h-[10vw]" v-for="date in units">
+        <div :class="[date.isToday() ? 'bg-gray-300' : '']" class="text-center text-sm md:text-base">{{ date.format('D') }}</div>
         <div class="events">
           <!-- Display events for this date -->
-          <div v-for="event in getEventsForDate(date)">
+          <div v-for="event in getEventsForDate(date)" :key="event.id">
             <p>{{ event.Pealkiri }}</p>
           </div>
         </div>
