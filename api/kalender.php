@@ -9,7 +9,7 @@ if ($conn->connect_error) {
 
 $event_id = isset($_GET['id']) ? $_GET['id'] : null;
 
-$sql = "SELECT Urituse_ID, Kuupaev, Pealkiri";
+$sql = "SELECT Urituse_ID, Kuupaev, Pealkiri, Tekst";
 $sql .= " FROM Uritused";
 
 if ($event_id) {
@@ -26,6 +26,7 @@ if ($result->num_rows > 0) {
             'Urituse_ID' => $row['Urituse_ID'],
             'Kuupaev' => $row['Kuupaev'],
             'Pealkiri' => $row['Pealkiri'],
+            'Tekst' => $row['Tekst']
         );
 
         $events[] = $event;
