@@ -9,7 +9,7 @@ if ($conn->connect_error) {
 
 $event_id = isset($_GET['id']) ? $_GET['id'] : null;
 
-$sql = "SELECT Urituse_ID, Kuupaev, Pealkiri, Tekst";
+$sql = "SELECT Urituse_ID, Kuupaev, Pealkiri, Korraldaja, Tekst";
 $sql .= " FROM Uritused";
 
 if ($event_id) {
@@ -22,11 +22,16 @@ $events = array();
 
 if ($result->num_rows > 0) {
     while($row = $result->fetch_assoc()) {
+        $row['Pealkiri'] = utf8_encode($row['Pealkiri']);
+        $row['Tekst'] = utf8_encode($row['Tekst']);
+        $row['Korraldaja'] = utf8_encode($row['Korraldaja']);
+
         $event = array(
             'Urituse_ID' => $row['Urituse_ID'],
-            'Kuupaev' => $row['Kuupaev'],
             'Pealkiri' => $row['Pealkiri'],
-            'Tekst' => $row['Tekst']
+            'Tekst' => $row['Tekst'],
+            'Korraldaja' => $row['Korraldaja'],
+            'Kuupaev' => $row['Kuupaev'],
         );
 
         $events[] = $event;
