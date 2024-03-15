@@ -69,7 +69,7 @@ export default {
     }
   },
   created() {
-    fetch('https://hommukaxsylvester.ikt.khk.ee/api/kalender.php?include_image=true')
+    fetch('https://hommukaxsylvester.ikt.khk.ee/api/kalender.php')
         .then(response => response.json())
         .then(data => {
           this.events = data;

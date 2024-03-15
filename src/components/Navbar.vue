@@ -20,7 +20,7 @@
       </div>
       <div class="flex items-center space-x-4 mr-32 text-[0.875rem]">
         <a href="https://siseveeb.voco.ee/kutseope/oppetoo/konsultatsioonid" class="text-white hover:text-[#c8d1e0] ease-in-out duration-200 px-3 py-1">Konsultatsioonid</a>
-        <button class="text-white hover:text-[#c8d1e0] ease-in-out duration-200 px-3 py-1">Praktika</button>
+        <button class="text-white hover:text-[#c8d1e0] ease-in-out duration-200 px-3 py-1" @click="this.$router.push('/praktika');">Praktika</button>
         <button class="text-white hover:text-[#c8d1e0] ease-in-out duration-200 px-3 py-1">Kutsemeistrivõistlused</button>
         <button class="text-white hover:text-[#c8d1e0] ease-in-out duration-200 px-3 py-1">Tunnustused</button>
         <button class="text-white hover:text-[#c8d1e0] ease-in-out duration-200 px-3 py-1" @click="this.$router.push('/uritused');">Üritused</button>
