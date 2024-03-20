@@ -11,13 +11,13 @@
 
     <!-- Week days -->
     <div class="grid grid-cols-7 gap-1">
-      <div v-for="day in weekDays" class="text-center text-[11px]">{{ day }}</div>
+      <div v-for="day in weekDays" class="text-center text-lg">{{ day }}</div>
     </div>
 
     <!-- Calendar days -->
     <div class="grid grid-cols-7">
       <div v-for="emptySlot in daystoPrepend"></div>
-      <div class="border border-slate-200 flex flex-col h-[6vw] md:h-[8vw] lg:h-[10vw]" v-for="date in units">
+      <div class="border border-slate-200 flex flex-col h-[6vw] md:h-[4vw] lg:h-[6vw]" v-for="date in units">
         <div :class="[date.isToday() ? 'bg-gray-300' : '']" class="text-center text-sm md:text-base">{{ date.format('D') }}</div>
         <div class="events">
           <!-- Display events for this date -->
