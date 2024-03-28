@@ -22,8 +22,10 @@
       <div class="flex items-center space-x-4 mr-32 text-[0.875rem]">
         <a href="https://siseveeb.voco.ee/kutseope/oppetoo/konsultatsioonid" class="text-white hover:text-[#c8d1e0] ease-in-out duration-200 px-3 py-1">Konsultatsioonid</a>
         <button class="text-white hover:text-[#c8d1e0] ease-in-out duration-200 px-3 py-1" @click="sendRoute('/praktika')">Praktika</button>
+        <button class="text-white hover:text-[#c8d1e0] ease-in-out duration-200 px-3 py-1" @click="sendRoute('/tunniplaan');">Tunniplaan</button>
+        <button class="text-white hover:text-[#c8d1e0] ease-in-out duration-200 px-3 py-1" @click="sendRoute('/erialad');">Erialad</button>
         <button class="text-white hover:text-[#c8d1e0] ease-in-out duration-200 px-3 py-1">Kutsemeistrivõistlused</button>
-        <button class="text-white hover:text-[#c8d1e0] ease-in-out duration-200 px-3 py-1">Tunnustused</button>
+        <button class="text-white hover:text-[#c8d1e0] ease-in-out duration-200 px-3 py-1" @click="sendRoute('/tunnustused');">Tunnustused</button>
         <button class="text-white hover:text-[#c8d1e0] ease-in-out duration-200 px-3 py-1" @click="sendRoute('/uritused')">Üritused</button>
       </div>
     </div>
@@ -46,6 +48,8 @@
       <!-- * Menus -->
       <a href="https://siseveeb.voco.ee/kutseope/oppetoo/konsultatsioonid" class="block text-black text-center py-2">Konsultatsioonid</a>
       <a href="#" class="block text-black text-center py-2" @click="sendRoute('/praktika')">Praktika</a>
+      <a class="text-white hover:text-[#c8d1e0] ease-in-out duration-200 px-3 py-1" @click="this.$router.push('/tunniplaan');">Tunniplaan</a>
+      <a class="text-white hover:text-[#c8d1e0] ease-in-out duration-200 px-3 py-1" @click="this.$router.push('/erialad');">Erialad</a>
       <a href="#" class="block text-black text-center py-2">Kutsemeistrivõistlused</a>
       <a href="#" class="block text-black text-center py-2">Tunnustused</a>
       <a href="#" class="block text-black text-center py-2" @click="sendRoute('/uritused')">Üritused</a>

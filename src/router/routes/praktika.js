@@ -1,8 +1,8 @@
-import Praktika from '@/views/PraktikaView.vue'
+import Praktika from "@/views/PraktikaView.vue";
 
 export default [
-  {
-    path: '/praktika',
-    component: Praktika,
-  },
+    {
+        path: "/praktika",
+        component: Praktika,
+    },
 ];
