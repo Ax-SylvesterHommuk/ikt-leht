@@ -4,6 +4,7 @@ import HomeRoutes from './routes/home';
 import EventsRoutes from './routes/events';
 import EventInfoRoutes from './routes/eventinfo';
 import PraktikaRoutes from './routes/praktika';
+import TunnustusedRoutes from './routes/tunnustused';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -12,6 +13,7 @@ const router = createRouter({
     ...EventsRoutes,
     ...EventInfoRoutes,
     ...PraktikaRoutes,
+    ...TunnustusedRoutes,
   ]
 });
 
