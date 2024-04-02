@@ -5,8 +5,7 @@
       <h2 class="text-2xl font-bold mb-4">Erialad</h2>
       <p class="text-lg text-gray-700">VOCO IT Akadeemia koosneb kahest osast: Ärikool ja IT kool, vali endale sobiv eriala nende listist.</p>
 
-      <!-- Add images here -->
-      <div class="flex flex-col justify-center">
+      <div class="flex flex-col justify-center items-center w-[50%] h-[50%] mx-auto mt-10">
         <a href="https://voco.ee/kool/arikool/" target="_blank" rel="noopener noreferrer">
           <img src="../assets/arikool.png" alt="Ärikool" class="mr-2">
         </a>
