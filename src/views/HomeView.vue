@@ -2,7 +2,7 @@
   <Navbar />
   <div class="w-full h-[900px] flex relative">
     <!-- Image with overlay -->
-    <div class="w-full h-full bg-[url('../assets/mainbg.jpg')] bg-cover bg-center absolute z-0"></div>
+    <div class="w-full h-full bg-[url('../assets/mainbg.jpg')] bg-cover bg-center absolute z-0 bg-fixed"></div>
 
     <!-- Dark overlay -->
     <div class="w-full h-full bg-black opacity-65 absolute z-10"></div>

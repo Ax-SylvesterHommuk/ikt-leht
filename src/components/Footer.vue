@@ -3,7 +3,7 @@
   <footer class="font-montserrat font-medium bg-black py-12 text-[1rem]">
     <div class="container mx-auto flex flex-col md:flex-row items-center justify-center md:justify-between">
       <!-- Logo -->
-      <img src="../assets/voco_it_kool_logo.svg" alt="Logo" class="h-[102px] cursor-pointer md:ml-40 mb-8" @click="this.$router.push('/')">
+      <img src="../assets/voco-t2ispikk-logo_valge.svg" alt="Logo" class="h-[102px] cursor-pointer md:ml-40 mb-8" @click="this.$router.push('/')">
 
       <!-- Contact Info -->
       <div class="flex flex-col md:flex-row md:mr-72">

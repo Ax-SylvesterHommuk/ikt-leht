@@ -5,7 +5,7 @@
     <div v-if="loading" class="text-center">Loading...</div>
     <div v-else>
       <div class="flex justify-between mb-4">
-        <button @click="goToPreviousWeek" class="px-4 py-2 bg-gray-200 rounded-md">Previous Week</button>
+        <button @click="goToPreviousWeek" class="px-4 py-2 bg-gray-200 rounded-md">Eelmine nädal</button>
         <select v-model="selectedGroup" @change="fetchTimetable" class="px-4 py-2 bg-gray-200 rounded-md">
           <option value="ITA20:1529">ITA20 Tarkvaraarendaja</option>
           <option value="ITA21:1583">ITA21 Tarkvaraarendaja</option>
@@ -13,7 +13,7 @@
           <option value="ITA23:1844">ITA23 Tarkvaraarendaja</option>
           <option value="ITA24:1950">ITA24 Tarkvaraarendaja</option>
         </select>
-        <button @click="goToNextWeek" class="px-4 py-2 bg-gray-200 rounded-md">Next Week</button>
+        <button @click="goToNextWeek" class="px-4 py-2 bg-gray-200 rounded-md">Järgmine nädal</button>
       </div>
       <table class="w-full border-collapse border border-gray-200">
         <thead>
