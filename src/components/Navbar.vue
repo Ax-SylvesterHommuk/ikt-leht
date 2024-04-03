@@ -9,7 +9,7 @@
       </div>
       <div class="flex items-center space-x-4 mr-32 text-[0.875rem]">
         <a class="text-black transition-colors hover:text-[#c8d1e0] ease-in-out duration-200 px-3" href="https://voco.ee/kontakt/" target="_blank">Kontakt</a>
-        <a class="text-black transition-colors hover:text-[#c8d1e0] ease-in-out duration-200 px-3 cursor-pointer" @click="sendRoute('/erialad');">Tunniplaan</a>
+        <a class="text-black transition-colors hover:text-[#c8d1e0] ease-in-out duration-200 px-3 cursor-pointer" @click="sendRoute('/tunniplaan');">Tunniplaan</a>
         <a class="text-black transition-colors hover:text-[#c8d1e0] ease-in-out duration-200 px-3" href="https://siseveeb.voco.ee" target="_blank">Siseveeb</a>
       </div>
     </div>
