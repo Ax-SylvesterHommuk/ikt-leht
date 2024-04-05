@@ -1,11 +1,11 @@
 <template>
     <Navbar />
-    <div class="bg-gray-100 font-montserrat min-h-screen py-8 flex">
+    <div class="font-montserrat min-h-screen py-8 flex flex-wrap mt-12">
         <!-- Sidebar -->
-        <div class="w-1/4"></div>
+        <div class="pl-[350px] pr-[350px]"></div>
         <div>
-            <ul class="text-lg text-left">
-                <li v-for="(tab, index) in tabs" :key="index">
+            <ul class="text-lg text-left m-0 pl-[0.875rem] pr-[0.875rem] pt-[0.75rem] pb-[0.75rem] list-none">
+                <li v-for="(tab, index) in tabs" :key="index" class="relative">
                     <a href="#"
                         class="border border-gray-300 py-2 px-4 w-64 block hover:bg-gray-200 hover:border-gray-400 transition duration-300 ease-in-out"
                         @click="currentTab = tab">{{ tab.title }}</a>
@@ -13,8 +13,8 @@
             </ul>
         </div>
         <!-- Content -->
-        <div class="w-2/4">
-            <div class="max-w-4xl mx-auto">
+        <div class="pl-[1.25rem]">
+            <div>
                 <h2 class="text-3xl font-bold mb-12">{{ currentTab.title }}</h2>
 
                 <p v-html="formattedContent" class="text-lg text-black w-[875px] leading-8 whitespace-break-spaces"></p>
