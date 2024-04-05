@@ -10,7 +10,7 @@
           <img src="../assets/arikool.png" alt="Ärikool" class="mr-2">
         </a>
         <a href="https://voco.ee/kool/it-kool/" target="_blank" rel="noopener noreferrer">
-          <img src="../assets/itkool.png" alt="IT kool" class="ml-2">
+          <img src="../assets/itkool.png" alt="IT kool" class="mr-2">
         </a>
       </div>
     </div>

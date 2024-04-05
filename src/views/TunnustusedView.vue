@@ -17,7 +17,7 @@
             <div>
                 <h2 class="text-3xl font-bold mb-12">{{ currentTab.title }}</h2>
 
-                <p v-html="formattedContent" class="text-lg text-black w-[875px] leading-8 whitespace-break-spaces"></p>
+                <p v-html="formattedContent" class="text-lg text-black w-auto leading-8 whitespace-break-spaces"></p>
             </div>
         </div>
     </div>
@@ -46,16 +46,20 @@ export default {
             currentTab: autahvel,
         };
     },
-    computed: {
-        formattedContent() {
-            // Replace **bold** text
-            let content = this.currentTab.content.replace(/\*\*(.*?)\*\*/g, '<strong class="text-black">$1</strong>');
+  computed: {
+    formattedContent() {
+      // Replace **bold** text
+      let content = this.currentTab.content.replace(/\*\*(.*?)\*\*/g, '<strong class="text-black">$1</strong>');
 
-            // Replace embedded URLs
-            content = content.replace(/\[(.*?)\]\((.*?)\)/g, '<a href="$2" class="text-black underline hover:text-gray-700 hover:underline cursor-pointer">$1</a>');
+      // Replace *semi-bold* text
+      content = content.replace(/\*(.*?)\*/g, '<span class="font-semibold">$1</span>');
 
-            return content;
-        }
+      // Replace embedded URLs
+      content = content.replace(/\[(.*?)\]\((.*?)\)/g, '<a href="$2" class="text-black underline hover:text-gray-700 hover:underline cursor-pointer">$1</a>');
+
+      return content;
     }
+  }
+
 };
 </script>
