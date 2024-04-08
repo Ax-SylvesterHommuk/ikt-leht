@@ -2,7 +2,7 @@
     <Navbar />
     <div class="font-montserrat min-h-screen py-8 flex flex-wrap mt-12">
         <!-- Sidebar -->
-        <div class="pl-[350px] pr-[350px]"></div>
+        <div class="pr-[350px]"></div>
         <div>
             <ul class="text-lg text-left m-0 pl-[0.875rem] pr-[0.875rem] pt-[0.75rem] pb-[0.75rem] list-none">
                 <li v-for="(tab, index) in tabs" :key="index" class="relative">
