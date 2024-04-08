@@ -23,7 +23,7 @@
         <a href="https://siseveeb.voco.ee/kutseope/oppetoo/konsultatsioonid" class="text-white hover:text-[#c8d1e0] ease-in-out duration-200 px-3 py-1">Konsultatsioonid</a>
         <button class="text-white hover:text-[#c8d1e0] ease-in-out duration-200 px-3 py-1" @click="sendRoute('/praktika')">Praktika</button>
         <button class="text-white hover:text-[#c8d1e0] ease-in-out duration-200 px-3 py-1" @click="sendRoute('/erialad');">Erialad</button>
-        <button class="text-white hover:text-[#c8d1e0] ease-in-out duration-200 px-3 py-1">Kutsemeistrivõistlused</button>
+        <button class="text-white hover:text-[#c8d1e0] ease-in-out duration-200 px-3 py-1" @click="sendRoute('/kutsevoistlus')" >Kutsemeistrivõistlused</button>
         <button class="text-white hover:text-[#c8d1e0] ease-in-out duration-200 px-3 py-1" @click="sendRoute('/tunnustused');">Tunnustused</button>
         <button class="text-white hover:text-[#c8d1e0] ease-in-out duration-200 px-3 py-1" @click="sendRoute('/uritused')">Üritused</button>
       </div>

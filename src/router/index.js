@@ -9,6 +9,7 @@ import TunnustusedRoutes from './routes/tunnustused';
 import TunniplaanRoutes from './routes/tunniplaan.js'
 import KontaktRoutes from './routes/kontakt.js'
 import AdminRoutes from './routes/admin';
+import KutsevoistlusRoutes from './routes/kutsevoistlus';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -21,7 +22,8 @@ const router = createRouter({
     ...TunniplaanRoutes,
     ...ErialadRoutes,
     ...KontaktRoutes,
-    ...AdminRoutes
+    ...AdminRoutes,
+    ...KutsevoistlusRoutes,
   ]
 });
 
