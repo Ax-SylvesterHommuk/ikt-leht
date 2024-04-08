@@ -32,7 +32,7 @@
     <!-- Background image -->
     <img src="../assets/voco muster RGB-02.png" alt="" class="md:mx-16 md:my-16 my-52 absolute scale-105 bottom-0 w-[739px] h-auto opacity-25">
   </div>
-
+  <Carousel/>
   <Calendar class="hidden md:block pt-72 pb-72" />
   <Footer />
 </template>
@@ -41,12 +41,14 @@
 import Navbar from '@/components/Navbar.vue';
 import Footer from '@/components/Footer.vue';
 import Calendar from '@/components/Calendar.vue';
+import Carousel from "@/components/Carousel.vue";
 
 export default {
   components: {
     Navbar,
     Footer,
-    Calendar
+    Calendar,
+    Carousel,
   }
 }
 </script>
