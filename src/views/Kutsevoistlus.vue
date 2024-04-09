@@ -1,43 +1,37 @@
 <template>
-  <div>
-    <Navbar />
-    <div class="bg-gray-100 min-h-screen py-8">
-      <div class="max-w-4xl mx-auto">
-        <h2 class="text-2xl font-bold font-montserrat mb-4">Kutsevõistlused</h2>
-        <ul>
-          <li v-for="month in sortedMonths" :key="month">
-            <h3 class="text-lg font-montserrat font-bold mt-4">{{ month }}</h3>
-            <ul class="w-full">
-              <router-link
-                  v-for="event in groupedEvents[month]"
-                  :key="event.Urituse_ID"
-                  :to="'/uritused/' + event.Urituse_ID"
-              >
-                <li class="bg-white shadow-md mb-4 cursor-pointer duration-150 ease-linear hover:bg-gray-200 flex items-center border border-[#afbacc] relative">
-                  <div class="w-[225px] flex-shrink-0 relative">
-                    <img :src="getImageUrl(event.Urituse_ID)" alt="Event Image" class="w-full h-full object-cover">
-                  </div>
-                  <div class="ml-4">
-                    <p class="text-lg font-montserrat font-semibold">{{ event.Pealkiri }}</p>
-                    <p class="text-gray-600 font-montserrat"><strong>Kuupäev:</strong> {{ formatDate(event.Kuupaev) }}</p>
-                  </div>
-                </li>
-              </router-link>
-            </ul>
-          </li>
-        </ul>
+  <Navbar />
+  <div class="font-montserrat min-h-screen py-8 flex flex-wrap mt-12">
+    <!-- Sidebar -->
+    <div class="pr-[350px]"></div>
+    <div>
+      <ul class="text-lg text-left m-0 pl-[0.875rem] pr-[0.875rem] pt-[0.75rem] pb-[0.75rem] list-none">
+        <li v-for="(tab, index) in tabs" :key="index" class="relative">
+          <a href="#"
+             class="border border-gray-300 py-2 px-4 w-64 block hover:bg-gray-200 hover:border-gray-400 transition duration-300 ease-in-out"
+             @click="currentTab = tab">{{ tab.title }}</a>
+        </li>
+      </ul>
+    </div>
+    <!-- Content -->
+    <div class="pl-[1.25rem]">
+      <div>
+        <h2 class="text-3xl font-bold mb-12">{{ currentTab.title }}</h2>
+
+        <p v-html="formattedContent" class="text-lg text-black w-auto leading-8 whitespace-break-spaces"></p>
       </div>
     </div>
-    <Footer />
   </div>
+
+  <Footer />
 </template>
 
 <script>
 import Navbar from '@/components/Navbar.vue';
 import Footer from '@/components/Footer.vue';
-import dayjs from 'dayjs';
-import 'dayjs/locale/et'; // Estonian locale
 
+import ategija from "@/helper/tabs2/ategija.js";
+import vvoistlus from "@/helper/tabs2/vvoistlus.js";
+import rvvoistlus from "@/helper/tabs2/rvvoistlus.js";
 export default {
   components: {
     Navbar,
@@ -45,46 +39,24 @@ export default {
   },
   data() {
     return {
-      events: [],
+      tabs: [ategija, vvoistlus, rvvoistlus],
+      currentTab: ategija,
     };
   },
   computed: {
-    groupedEvents() {
-      const grouped = {};
-      this.events.forEach(event => {
-        const month = dayjs(event.Kuupaev).locale('et').format('MMMM YYYY');
-        if (!grouped[month]) {
-          grouped[month] = [];
-        }
-        grouped[month].push(event);
-      });
-      return grouped;
-    },
-    sortedMonths() {
-      return Object.keys(this.groupedEvents).sort((a, b) => {
-        const dateA = dayjs(a, 'MMMM YYYY').toDate();
-        const dateB = dayjs(b, 'MMMM YYYY').toDate();
-        return dateA - dateB;
-      });
-    }
-  },
-  created() {
-    fetch('https://hommukaxsylvester.ikt.khk.ee/api/kalender.php')
-        .then(response => response.json())
-        .then(data => {
-          this.events = data;
-        })
-        .catch(error => {
-          console.error('Error fetching events:', error);
-        });
-  },
-  methods: {
-    formatDate(date) {
-      return dayjs(date).locale('et').format('D. MMMM YYYY').replace(/^./, match => match.toUpperCase());
-    },
-    getImageUrl(eventId) {
-      return `https://hommukaxsylvester.ikt.khk.ee/api/get_image.php?id=${eventId}`;
+    formattedContent() {
+      // Replace **bold** text
+      let content = this.currentTab.content.replace(/\*\*(.*?)\*\*/g, '<strong class="text-black">$1</strong>');
+
+      // Replace *semi-bold* text
+      content = content.replace(/\*(.*?)\*/g, '<span class="font-semibold">$1</span>');
+
+      // Replace embedded URLs
+      content = content.replace(/\[(.*?)\]\((.*?)\)/g, '<a href="$2" class="text-black underline hover:text-gray-700 hover:underline cursor-pointer">$1</a>');
+
+      return content;
     }
   }
-}
+
+};
 </script>

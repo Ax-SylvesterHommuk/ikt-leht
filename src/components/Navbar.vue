@@ -49,8 +49,8 @@
       <a href="#" class="block text-black text-center py-2" @click="sendRoute('/praktika')">Praktika</a>
       <a class="text-white hover:text-[#c8d1e0] ease-in-out duration-200 px-3 py-1" @click="this.$router.push('/tunniplaan');">Tunniplaan</a>
       <a class="text-white hover:text-[#c8d1e0] ease-in-out duration-200 px-3 py-1" @click="this.$router.push('/erialad');">Erialad</a>
-      <a href="#" class="block text-black text-center py-2">Kutsemeistrivõistlused</a>
-      <a href="#" class="block text-black text-center py-2">Tunnustused</a>
+      <a href="#" class="block text-black text-center py-2" @click="sendRoute('/kutsevoistlus')">Kutsemeistrivõistlused</a>
+      <a href="#" class="block text-black text-center py-2" @click="sendRoute('/tunnustused');">Tunnustused</a>
       <a href="#" class="block text-black text-center py-2" @click="sendRoute('/uritused')">Üritused</a>
     </div>
   </div>
