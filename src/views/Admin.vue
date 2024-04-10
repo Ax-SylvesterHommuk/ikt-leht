@@ -5,7 +5,7 @@
             <p v-if="invalidCredentials" class="text-red-500 mb-4 animate-pulse">Vale kasutaja nimi või parool!</p>
             <form @submit.prevent="login" class="space-y-4">
                 <div>
-                    <label for="username" class="block mb-1">Kasutaja nimi:</label>
+                    <label for="username" class="block mb-1">Kasutajanimi:</label>
                     <input type="text" id="username" name="username" v-model="username"
                         class="w-full px-4 py-2 border focus:outline-none focus:border-gray-500">
                 </div>
